@@ -7,8 +7,12 @@ Este proyecto implementa un sistema de login para una plataforma de gestión edu
 ```
 login-app-02/
 ├── index.html          # Archivo principal HTML
-├── styles.css          # Estilos CSS responsivos
-├── script.js           # Funcionalidad JavaScript
+├── CSS/
+│   └── styles.css      # Estilos CSS responsivos
+├── JS/
+│   └── script.js       # Funcionalidad JavaScript
+├── assets/
+│   └── classroom.png   # Imagen de fondo para la sección izquierda
 └── README.md           # Documentación del proyecto
 ```
 
@@ -22,11 +26,13 @@ login-app-02/
   - Implementado en HTML, CSS y JavaScript
   - Cumple con el diseño de referencia
 
-### HU0002 - Formulario de login - Imagen de fondo 🔄 PENDIENTE
+### HU0002 - Formulario de login - Imagen de fondo ✅ COMPLETADO
 - **Objetivo**: Como PO quiero agregar una imagen alusiva a instituciones educativas
 - **Características**:
   - Imagen en el 50% izquierdo del espacio
   - Responsive para diferentes dispositivos
+  - Imagen local `classroom.png` implementada
+  - Estructura de carpetas organizada (CSS/, JS/, assets/)
 
 ### HU0003 - Formulario de login - Datos del sistema 🔄 PENDIENTE
 - **Objetivo**: Como PO quiero agregar información de gestión institucional

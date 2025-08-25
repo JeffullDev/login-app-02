@@ -18,11 +18,31 @@ body {
 /* Left Section - 50% width */
 .left-section {
     width: 50%;
-    background: #f8f9fa;
+    background: linear-gradient(rgba(111, 66, 193, 0.8), rgba(0, 123, 255, 0.8)), 
+                url('../assets/classroom.png') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    color: white;
+    text-align: center;
+}
+
+.left-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.left-section .content {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
 }
 
 /* Right Section - 50% width */
@@ -201,6 +221,18 @@ body {
     
     .left-section {
         min-height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(rgba(111, 66, 193, 0.8), rgba(0, 123, 255, 0.8)), 
+                          url('../assets/classroom.png');
+    }
+    
+    .left-section h2 {
+        font-size: 2rem;
+    }
+    
+    .left-section p {
+        font-size: 1rem;
     }
     
     .right-section {
