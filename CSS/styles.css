@@ -6,8 +6,9 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f5f5;
+    background: #f8fafc;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -18,7 +19,7 @@ body {
 /* Left Section - 50% width */
 .left-section {
     width: 50%;
-    background: linear-gradient(rgba(111, 66, 193, 0.8), rgba(0, 123, 255, 0.8)), 
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95)), 
                 url('../assets/classroom.png') center/cover;
     display: flex;
     align-items: center;
@@ -26,6 +27,7 @@ body {
     position: relative;
     color: white;
     text-align: center;
+    overflow: hidden;
 }
 
 .left-section::before {
@@ -35,21 +37,146 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
     z-index: 1;
 }
 
 .left-section .content {
     position: relative;
     z-index: 2;
-    max-width: 80%;
+    max-width: 85%;
+    padding: 2rem 0;
+}
+
+/* Brand Logo */
+.brand-logo {
+    margin-bottom: 3rem;
+}
+
+.logo-shape {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.logo-shape i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.brand-logo h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brand-logo p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    font-weight: 400;
+}
+
+/* Main Heading */
+.main-heading {
+    margin-bottom: 3rem;
+}
+
+.main-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.main-heading p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Feature List */
+.feature-list {
+    margin-bottom: 3rem;
+    text-align: left;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0;
+}
+
+.feature-dot {
+    color: #10b981;
+    font-size: 0.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.feature-item span {
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Statistics */
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+/* Small Logo */
+.small-logo {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
 }
 
 /* Right Section - 50% width */
 .right-section {
     width: 50%;
-    background: white;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
@@ -57,35 +184,91 @@ body {
 
 .login-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     padding: 2.5rem;
-    border: 1px solid #e9ecef;
+    border: 1px solid #e2e8f0;
 }
 
+/* Login Header */
 .login-header {
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: -1rem;
 }
 
-.login-header i {
-    font-size: 3rem;
-    color: #6f42c1;
-    margin-bottom: 1rem;
+.header-logo {
+    margin-bottom: 1.5rem;
+}
+
+.crest-logo {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 3px solid #ef4444;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.2);
+}
+
+.crest-logo i:first-child {
+    font-size: 1.5rem;
+    color: #ef4444;
+    margin-bottom: 0.25rem;
+}
+
+.crest-logo i:nth-child(2) {
+    font-size: 1.2rem;
+    color: #3b82f6;
+}
+
+.crest-text {
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #ef4444;
+    background: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    white-space: nowrap;
 }
 
 .login-header h1 {
-    font-size: 2rem;
-    color: #212529;
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.login-header p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* Login Form Container */
+.login-form-container {
+    margin-bottom: 2rem;
+}
+
+.login-form-container h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
-.login-header p {
-    color: #6c757d;
-    font-size: 1rem;
+.form-instruction {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
 }
 
 .form-group {
@@ -95,8 +278,8 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #212529;
-    font-weight: 500;
+    color: #374151;
+    font-weight: 600;
     font-size: 0.9rem;
 }
 
@@ -109,74 +292,67 @@ body {
 .input-container i:first-child {
     position: absolute;
     left: 1rem;
-    color: #6c757d;
+    color: #9ca3af;
     z-index: 2;
 }
 
 .input-container input {
     width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
+    padding: 1rem 3rem 1rem 3rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background: #f8f9fa;
+    background: #f9fafb;
+    color: #374151;
 }
 
 .input-container input:focus {
     outline: none;
-    border-color: #6f42c1;
+    border-color: #3b82f6;
     background: white;
-    box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
+
 
 .toggle-password {
     position: absolute;
     right: 1rem;
-    color: #6c757d;
+    color: #9ca3af;
     cursor: pointer;
     z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #6b7280;
 }
 
 .form-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: #6c757d;
-    font-size: 0.9rem;
-}
-
-.checkbox-container input[type="checkbox"] {
-    margin-right: 0.5rem;
-    width: auto;
-    padding: 0;
+    text-align: right;
+    margin-bottom: 2rem;
 }
 
 .forgot-password {
-    color: #6f42c1;
+    color: #3b82f6;
     text-decoration: none;
     font-size: 0.9rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .forgot-password:hover {
-    color: #5a32a3;
+    color: #2563eb;
+    text-decoration: underline;
 }
 
 .login-btn {
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(135deg, #6f42c1 0%, #007bff 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -185,27 +361,41 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
 }
 
 .login-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(111, 66, 193, 0.4);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
-.help-link {
+/* Login Footer */
+.login-footer {
     text-align: center;
-    margin-top: 1.5rem;
-    color: #6c757d;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.login-footer p {
+    color: #6b7280;
     font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
-.help-link a {
-    color: #6f42c1;
+.login-footer a {
+    color: #3b82f6;
     text-decoration: none;
+    font-weight: 500;
 }
 
-.help-link a:hover {
+.login-footer a:hover {
     text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.8rem !important;
+    color: #9ca3af !important;
 }
 
 /* Responsive Design */
@@ -220,43 +410,76 @@ body {
     }
     
     .left-section {
-        min-height: 200px;
-        background-size: cover;
-        background-position: center;
-        background-image: linear-gradient(rgba(111, 66, 193, 0.8), rgba(0, 123, 255, 0.8)), 
-                          url('../assets/classroom.png');
+        min-height: 300px;
+        padding: 2rem 1rem;
     }
     
-    .left-section h2 {
+    .left-section .content {
+        max-width: 95%;
+        padding: 1rem 0;
+    }
+    
+    .brand-logo h2 {
         font-size: 2rem;
     }
     
-    .left-section p {
-        font-size: 1rem;
+    .main-heading h1 {
+        font-size: 1.8rem;
+    }
+    
+    .statistics {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .stat-item {
+        flex: none;
     }
     
     .right-section {
         padding: 1rem;
+        flex-direction: column;
+    }
+    
+    .login-header {
+        margin-bottom: 1.5rem;
+        margin-top: 0;
     }
     
     .login-container {
         padding: 2rem;
+        margin: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .login-container {
         padding: 1.5rem;
-        margin: 1rem;
+        margin: 0.5rem;
     }
     
-    .login-header h1 {
+    .brand-logo h2 {
+        font-size: 1.8rem;
+    }
+    
+    .main-heading h1 {
         font-size: 1.5rem;
     }
     
-    .form-options {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: flex-start;
+    .feature-list {
+        max-width: 95%;
+    }
+    
+    .crest-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .crest-logo i:first-child {
+        font-size: 1.2rem;
+    }
+    
+    .crest-logo i:nth-child(2) {
+        font-size: 1rem;
     }
 }

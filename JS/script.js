@@ -74,4 +74,62 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('edusystem_remember', this.checked);
         });
     }
+    
+    // Feature List Animation
+    const featureItems = document.querySelectorAll('.feature-item');
+    if (featureItems.length > 0) {
+        featureItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 100);
+            }, index * 150);
+        });
+    }
+    
+    // Statistics Animation
+    const statNumbers = document.querySelectorAll('.stat-number');
+    if (statNumbers.length > 0) {
+        statNumbers.forEach((stat, index) => {
+            setTimeout(() => {
+                stat.style.transform = 'scale(0.8)';
+                stat.style.transition = 'all 0.5s ease';
+                
+                setTimeout(() => {
+                    stat.style.transform = 'scale(1)';
+                }, 200);
+            }, index * 200);
+        });
+    }
+    
+    // Logo Animation
+    const logoShape = document.querySelector('.logo-shape');
+    if (logoShape) {
+        logoShape.addEventListener('mouseenter', function() {
+            this.style.transform = 'rotate(5deg) scale(1.05)';
+            this.style.transition = 'all 0.3s ease';
+        });
+        
+        logoShape.addEventListener('mouseleave', function() {
+            this.style.transform = 'rotate(0deg) scale(1)';
+        });
+    }
+    
+    // Crest Logo Animation
+    const crestLogo = document.querySelector('.crest-logo');
+    if (crestLogo) {
+        crestLogo.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.transition = 'all 0.3s ease';
+        });
+        
+        crestLogo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    }
 });
